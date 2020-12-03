@@ -27,3 +27,33 @@ class ShogiKif:
     """
         対局の内容を格納する
     """
+
+
+class Piece:
+    """
+        駒の情報を格納する
+    """
+    def __init__(
+        self,
+        piece: int,
+        isGradeUp: bool = false,
+        turn: int,
+    ):
+        """
+            駒の情報の初期化
+            Parameters
+            ----------
+            piece :
+                駒の種類。int であれば何でもよいことにする
+            nari  :
+                成駒かどうか。true or false で
+            turn  :
+                だれの駒か。これも 0 or 1 だが詳細には限定しない。
+        """
+        self.piece = piece
+        self.nari = isGradeUp
+        self.turn = turn
+
+
+# Other Vartex
+NoPiece = Piece(None, False)
